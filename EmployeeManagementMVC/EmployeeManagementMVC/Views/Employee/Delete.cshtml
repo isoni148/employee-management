@@ -1,0 +1,25 @@
+﻿@model EmployeeManagementMVC.Models.Employee
+
+<h2>Delete Employee</h2>
+
+<h3>Are you sure you want to delete this employee?</h3>
+
+<form asp-action="Delete" method="post">
+
+    <input asp-for="EmployeeId" type="hidden" />
+
+    <p><b>Name:</b> @Model.EmployeeName</p>
+    <p><b>Department:</b> @Model.Department</p>
+    <p><b>Salary:</b> @Model.Salary</p>
+
+    <button type="submit" class="btn btn-danger">
+        Delete
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+
+    <a asp-action="Index">Cancel</a>
+
+</form>

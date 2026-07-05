@@ -1,0 +1,38 @@
+﻿@model EmployeeManagementMVC.Models.Employee
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input asp-for="EmployeeId" type="hidden" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="EmployeeName" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Department</label>
+        <input asp-for="Department" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Salary</label>
+        <input asp-for="Salary" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-warning">
+        Update
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Back
+    </a>
+
+</form>
