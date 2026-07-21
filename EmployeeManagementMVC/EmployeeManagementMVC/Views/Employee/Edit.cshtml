@@ -12,12 +12,25 @@
     </div>
 
     <br />
-
+@* 
     <div>
         <label>Department</label>
         <input asp-for="Department" />
-    </div>
+    </div> *@
+    <div class="mb-3">
+    <label asp-for="DepartmentId" class="form-label"></label>
 
+    <select asp-for="DepartmentId"
+            asp-items="ViewBag.Department"
+            class="form-select">
+
+        <option value="">-- Select Department --</option>
+
+    </select>
+
+    <span asp-validation-for="DepartmentId"
+          class="text-danger"></span>
+</div>
     <br />
 
     <div>
